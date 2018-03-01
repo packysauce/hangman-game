@@ -15,11 +15,13 @@ var words = [
 var selectedWord = words[Math.floor(Math.random()*words.length)];
 var dashes = [];
 var alreadyGuessed = [];
-var letterArray = selectedWord.split("");
+var splitWord = selectedWord.split("");
 
 
-for (var i = 0; i < letterArray.length; i++) {
+for (var i = 0; i < splitWord.length; i++) {
     dashes.push('_')
+
+
 }
 
 
@@ -40,21 +42,25 @@ document.onkeyup = function(event) {
     alreadyGuessed.push(key);
     guessesEl.innerText = alreadyGuessed.join('  ')
 
-    for (var j = 0; j < letterArray.length; j++){
-        var guessLetter = letterArray[j];
+
+    for (var j = 0; j < splitWord.length; j++){
+        var letter = splitWord[j];
 
 
-        if (guessLetter === key){
+        if (letter === key){
             
-            console.log("this is correct")
+                console.log("got this far")
+            
             
 
             
         } else { 
             console.log ("this is not correct")}
-        
-    }
+     
+            
 
+
+    }
 
 
 }
