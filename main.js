@@ -30,9 +30,9 @@ document.onkeyup = function(event) {
         var letters = wordArray[j]
 
 
-        if (key === letters){
+        if (letters === key){
 
-            Console.log ("this is a good guess")
+            console.log ("this is a good guess")
             
         } else { console.log ("this is not correct")}
         
