@@ -1,10 +1,24 @@
-var word = 'ducky';
-var dashes = []
-var alreadyGuessed = []
-var wordArray = word.split("")
+var words = [
+    "duck",
+    "fish",
+    "cat",
+    "dog",
+    "horse",
+    "donkey",
+    "pig",
+    "cow",
+    "goat",
+    "chicken"
+]
 
 
-for (var i = 0; i < word.length; i++) {
+var selectedWord = words[Math.floor(Math.random()*words.length)];
+var dashes = [];
+var alreadyGuessed = [];
+var wordArray = selectedWord.split("");
+
+
+for (var i = 0; i < selectedWord.length; i++) {
     dashes.push('_')
 }
 
@@ -27,7 +41,7 @@ document.onkeyup = function(event) {
     guessesEl.innerText = alreadyGuessed.join('  ')
 
     for (var j = 0; j < wordArray.length; j++){
-        var letters = wordArray[j]
+        var letters = wordArray[j];
 
 
         if (letters === key){
