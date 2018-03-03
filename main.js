@@ -22,8 +22,8 @@ for (var i = 0; i < splitWord.length; i++) {
     dashes.push(blanks);
 }
 
-for (var index = 0; index < dashes.length; index++){
-    currentResultEl.appendChild(dashes[index])
+for (var i = 0; i < dashes.length; i++){
+    currentResultEl.appendChild(dashes[i])
 }
 
 document.onkeyup = function(event) {
@@ -43,7 +43,7 @@ document.onkeyup = function(event) {
     }
 
     if (alreadyGuessed.length === 5){
-        
+
     }
 
     alreadyGuessed.push(key);
@@ -51,8 +51,8 @@ document.onkeyup = function(event) {
     
     var keyClass = classFor(key);
 
-    for (var j = 0; j <blanks.length; j++) {
-        blanks[j].innerHTML = key;
+    for (var i = 0; i < blanks.length; i++) {
+        blanks[i].innerHTML = key;
     }
             
 
