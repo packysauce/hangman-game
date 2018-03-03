@@ -18,7 +18,6 @@ function classFor(letter) {
 for (var i = 0; i < splitWord.length; i++) {
     var blanks = document.createElement('span');
     blanks.classList.add(classFor(splitWord[i]));
-    blanks.style = 'padding 10px';
     blanks.innerText = ' _ ';
     dashes.push(blanks);
 }
@@ -45,6 +44,7 @@ document.onkeyup = function(event) {
 
     alreadyGuessed.push(key);
     guessesEl.innerText = alreadyGuessed.join(' ');
+    
     var keyClass = classFor(key);
 
     for (var j = 0; j <blanks.length; j++) {
