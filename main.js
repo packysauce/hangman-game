@@ -42,6 +42,10 @@ document.onkeyup = function(event) {
         console.log('already guessed')
     }
 
+    if (alreadyGuessed.length === 5){
+        
+    }
+
     alreadyGuessed.push(key);
     guessesEl.innerText = alreadyGuessed.join(' ');
     
