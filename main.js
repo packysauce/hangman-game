@@ -1,3 +1,4 @@
+
 var words = ["duck","fish","cat","dog","horse","donkey","pig","cow","goat","chicken"
 ]
 
@@ -44,7 +45,8 @@ document.onkeyup = function(event) {
     }
 
     if (correctGuesses.length === dashes.length){
-        alert("You Won! The word was: " + selectedWord)
+        alert("You Won! The word was: " + selectedWord);
+        
     }
     
 
@@ -61,7 +63,6 @@ document.onkeyup = function(event) {
     
 
 }
-
 
 
 
