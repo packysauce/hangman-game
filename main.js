@@ -30,12 +30,17 @@ for (var index = 0; index < dashes.length; index++){
 document.onkeyup = function(event) {
     var key = event.key.toLowerCase();
 
+    console.log('keypress')
+
     if (okLetters.indexOf(key) === -1) {
         return;
+
+        console.log('good key')
     }
 
-    if (alreadyGuessed.indexOf(key) ===-1){
+    if (alreadyGuessed.indexOf(key) !== -1){
         return;
+        console.log('already guessed')
     }
 
     alreadyGuessed.push(key);
