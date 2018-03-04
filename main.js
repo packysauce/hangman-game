@@ -1,4 +1,3 @@
-
 var words = ["duck","fish","cat","dog","horse","donkey","pig","cow","goat","chicken"
 ]
 
@@ -36,11 +35,11 @@ document.onkeyup = function(event) {
         return;
     }
 
-    if (alreadyGuessed.indexOf(key) !== -1){
+    if (alreadyGuessed.indexOf(key) > -1){
         return;
     }
 
-    if(splitWord.indexOf(key) !== -1){
+    if(splitWord.indexOf(key) > -1){
         correctGuesses.push(key);
     }
     
@@ -60,6 +59,7 @@ document.onkeyup = function(event) {
     }
 
 }
+
 
 
 
