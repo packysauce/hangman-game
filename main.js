@@ -43,14 +43,7 @@ document.onkeyup = function(event) {
     if(splitWord.indexOf(key) !== -1){
         correctGuesses.push(key);
     }
-
-    if (correctGuesses.length === dashes.length){
-        alert("You Won! The word was: " + selectedWord);
-        
-    }
     
-
-
     alreadyGuessed.push(key);
     guessesEl.innerText = alreadyGuessed.join(' ');
     
@@ -58,9 +51,13 @@ document.onkeyup = function(event) {
     var blanks = document.getElementsByClassName(keyClass)
     for (var i = 0; i < blanks.length; i++) {
         blanks[i].innerHTML = key;
-
+        blanks[i].classList.add("correct")
     }
-    
+
+    if (document.getElementsByClassName("correct").length === dashes.length){
+        alert("You Won! The word was: " + selectedWord);
+        
+    }
 
 }
 
